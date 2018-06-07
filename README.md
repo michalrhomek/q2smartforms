@@ -4,6 +4,13 @@ Smart jQuery library for full dynamic web forms
 Demo:
 http://q2.cz/clients/smartforms/
 
+## You will need:
+- assets/styles.css
+- assets/script.js
+
+Library works with jQuery! You have to load jQuery library before script.js loading
+Some elements need FontAwesome 4 library. 
+
 ## Basic init:
   ```
   <form class="o-q2form">
