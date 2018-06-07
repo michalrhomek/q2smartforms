@@ -1,0 +1,336 @@
+/*
+    //
+    // @author: Michal Hromek
+    //
+*/
+/*
+    //
+    // Q2 FORM STYLES
+    //
+*/
+.o-q2form {
+  display: block;
+  max-width: 100%;
+  /* 
+        //
+        // FORM ELEMENT
+    */
+  /* end of form element */
+  /* ================================== */
+  /*
+        //
+        // FORM ELEMENT CHECK
+        //
+    */
+  /* end of u check form element */
+  /* Error Message */
+}
+
+.o-q2form h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.o-q2form .c-formElement:not(.u-check) {
+  position: relative;
+  display: block;
+  margin: 5px 0;
+  height: 55px;
+  /* Label */
+  /* end of label */
+  /* Hint box */
+  /* end of hint box */
+  /* end of inputs */
+  /* Error Message */
+  /*
+            //
+            // ERROR STATE
+        */
+  /* end of error state */
+  /* end of error state */
+}
+
+.o-q2form .c-formElement:not(.u-check) label {
+  position: absolute;
+  top: 25px;
+  left: 5px;
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  color: #8d8d8d;
+  pointer-events: none;
+  transition: 300ms;
+}
+
+.o-q2form .c-formElement:not(.u-check) label.required:after {
+  content: "*";
+  padding: 0 1px;
+  color: red;
+}
+
+.o-q2form .c-formElement:not(.u-check) .hintBox {
+  position: absolute;
+  top: 27px;
+  right: 5px;
+  font-size: 16px;
+  color: silver;
+  cursor: pointer;
+  /* Message box */
+  /* end of hint flash */
+}
+
+.o-q2form .c-formElement:not(.u-check) .hintBox:hover {
+  color: #8d8d8d;
+}
+
+.o-q2form .c-formElement:not(.u-check) .hintBox:hover .hintFlash {
+  display: block;
+}
+
+.o-q2form .c-formElement:not(.u-check) .hintBox .hintFlash {
+  position: absolute;
+  bottom: 22px;
+  left: calc(50% - 100px);
+  display: none;
+  width: 200px;
+  padding: 5px;
+  font-size: 12px;
+  line-height: 1.1;
+  color: #8d8d8d;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px #8d8d8d;
+  background: #fff;
+  z-index: 10;
+}
+
+@media (max-width: 992px) {
+  .o-q2form .c-formElement:not(.u-check) .hintBox .hintFlash {
+    left: auto;
+    right: -10px;
+  }
+}
+
+.o-q2form .c-formElement:not(.u-check) .hintBox .hintFlash:before {
+  position: absolute;
+  content: "";
+  bottom: -7px;
+  left: calc(50% - 7px);
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #fff;
+}
+
+@media (max-width: 992px) {
+  .o-q2form .c-formElement:not(.u-check) .hintBox .hintFlash:before {
+    left: auto;
+    right: 10px;
+  }
+}
+
+.o-q2form .c-formElement:not(.u-check) input[type="text"],
+.o-q2form .c-formElement:not(.u-check) input[type="number"],
+.o-q2form .c-formElement:not(.u-check) input[type="email"],
+.o-q2form .c-formElement:not(.u-check) input[type="tel"],
+.o-q2form .c-formElement:not(.u-check) input[type="date"] {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  top: 18px;
+  font-size: 16px;
+  color: white;
+  border: 1px solid #c0c0c0;
+  outline: none;
+  cursor: pointer;
+  /* end of focus */
+}
+
+.o-q2form .c-formElement:not(.u-check) input[type="text"]::placeholder,
+.o-q2form .c-formElement:not(.u-check) input[type="number"]::placeholder,
+.o-q2form .c-formElement:not(.u-check) input[type="email"]::placeholder,
+.o-q2form .c-formElement:not(.u-check) input[type="tel"]::placeholder,
+.o-q2form .c-formElement:not(.u-check) input[type="date"]::placeholder {
+  color: #fff;
+}
+
+.o-q2form .c-formElement:not(.u-check) input[type="text"]::-moz-placeholder,
+.o-q2form .c-formElement:not(.u-check) input[type="number"]::-moz-placeholder,
+.o-q2form .c-formElement:not(.u-check) input[type="email"]::-moz-placeholder,
+.o-q2form .c-formElement:not(.u-check) input[type="tel"]::-moz-placeholder,
+.o-q2form .c-formElement:not(.u-check) input[type="date"]::-moz-placeholder {
+  color: #fff;
+}
+
+.o-q2form .c-formElement:not(.u-check) input[type="text"]:focus,
+.o-q2form .c-formElement:not(.u-check) input[type="number"]:focus,
+.o-q2form .c-formElement:not(.u-check) input[type="email"]:focus,
+.o-q2form .c-formElement:not(.u-check) input[type="tel"]:focus,
+.o-q2form .c-formElement:not(.u-check) input[type="date"]:focus {
+  border-bottom: 2px solid #5f5f5f;
+  color: #000;
+}
+
+.o-q2form .c-formElement:not(.u-check) input[type="text"]:focus + label,
+.o-q2form .c-formElement:not(.u-check) input[type="number"]:focus + label,
+.o-q2form .c-formElement:not(.u-check) input[type="email"]:focus + label,
+.o-q2form .c-formElement:not(.u-check) input[type="tel"]:focus + label,
+.o-q2form .c-formElement:not(.u-check) input[type="date"]:focus + label {
+  top: 0;
+  font-size: 13px;
+  color: #5f5f5f;
+}
+
+.o-q2form .c-formElement:not(.u-check) input[type="text"]:focus::placeholder,
+.o-q2form .c-formElement:not(.u-check) input[type="number"]:focus::placeholder,
+.o-q2form .c-formElement:not(.u-check) input[type="email"]:focus::placeholder,
+.o-q2form .c-formElement:not(.u-check) input[type="tel"]:focus::placeholder,
+.o-q2form .c-formElement:not(.u-check) input[type="date"]:focus::placeholder {
+  color: #cacaca;
+}
+
+.o-q2form .c-formElement:not(.u-check) input[type="text"]:focus::-moz-placeholder,
+.o-q2form .c-formElement:not(.u-check) input[type="number"]:focus::-moz-placeholder,
+.o-q2form .c-formElement:not(.u-check) input[type="email"]:focus::-moz-placeholder,
+.o-q2form .c-formElement:not(.u-check) input[type="tel"]:focus::-moz-placeholder,
+.o-q2form .c-formElement:not(.u-check) input[type="date"]:focus::-moz-placeholder {
+  color: #cacaca;
+}
+
+.o-q2form .c-formElement:not(.u-check) input[type="text"].filled,
+.o-q2form .c-formElement:not(.u-check) input[type="number"].filled,
+.o-q2form .c-formElement:not(.u-check) input[type="email"].filled,
+.o-q2form .c-formElement:not(.u-check) input[type="tel"].filled,
+.o-q2form .c-formElement:not(.u-check) input[type="date"].filled {
+  color: #000;
+}
+
+.o-q2form .c-formElement:not(.u-check) input[type="text"].filled + label,
+.o-q2form .c-formElement:not(.u-check) input[type="number"].filled + label,
+.o-q2form .c-formElement:not(.u-check) input[type="email"].filled + label,
+.o-q2form .c-formElement:not(.u-check) input[type="tel"].filled + label,
+.o-q2form .c-formElement:not(.u-check) input[type="date"].filled + label {
+  top: 0;
+  font-size: 13px;
+}
+
+.o-q2form .c-formElement:not(.u-check) input[type="date"] {
+  padding: 4px 10px;
+}
+
+.o-q2form .c-formElement:not(.u-check).error {
+  height: 80px;
+}
+
+.o-q2form .c-formElement:not(.u-check).error input[type="text"],
+.o-q2form .c-formElement:not(.u-check).error input[type="number"],
+.o-q2form .c-formElement:not(.u-check).error input[type="email"],
+.o-q2form .c-formElement:not(.u-check).error input[type="tel"],
+.o-q2form .c-formElement:not(.u-check).error input[type="date"] {
+  border: 1px solid #f45151;
+}
+
+.o-q2form .c-formElement:not(.u-check).error label {
+  color: #f45151;
+}
+
+.o-q2form .c-formElement:not(.u-check).possitive input[type="text"],
+.o-q2form .c-formElement:not(.u-check).possitive input[type="number"],
+.o-q2form .c-formElement:not(.u-check).possitive input[type="email"],
+.o-q2form .c-formElement:not(.u-check).possitive input[type="tel"],
+.o-q2form .c-formElement:not(.u-check).possitive input[type="date"] {
+  border: 1px solid #2ca92e;
+}
+
+.o-q2form .c-formElement:not(.u-check).possitive label {
+  color: #2ca92e;
+}
+
+.o-q2form .c-formElement.u-check {
+  position: relative;
+  display: block;
+  margin: 5px 0;
+  height: 30px;
+  /* CHECK BOX LABEL */
+  /* end of check box */
+}
+
+.o-q2form .c-formElement.u-check .c-checkBox {
+  position: relative;
+  cursor: pointer;
+  /* end of input */
+}
+
+.o-q2form .c-formElement.u-check .c-checkBox input[type="checkbox"] {
+  visibility: hidden;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  /* end of checked input */
+}
+
+.o-q2form .c-formElement.u-check .c-checkBox input[type="checkbox"] + span {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid silver;
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+.o-q2form .c-formElement.u-check .c-checkBox input[type="checkbox"]:checked + span {
+  border-color: #2ca92e;
+}
+
+.o-q2form .c-formElement.u-check .c-checkBox input[type="checkbox"]:checked + span:before {
+  position: absolute;
+  left: 1px;
+  top: -1px;
+  font-size: 12px;
+  content: "\f00c ";
+  font-family: FontAwesome;
+  color: #2ca92e;
+}
+
+.o-q2form .c-formElement.u-check .c-checkBox label[for] {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  pointer-events: none;
+}
+
+.o-q2form .c-formElement.u-check .c-checkBox label[for].required:after {
+  content: "*";
+  padding: 0 1px;
+  color: red;
+}
+
+.o-q2form .c-formElement.u-check.error {
+  height: 50px;
+}
+
+.o-q2form .c-formElement.u-check.error label {
+  color: #f45151;
+}
+
+.o-q2form .c-errorMessage {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding: 2px 8px;
+  max-width: 100%;
+  color: #fff;
+  border-radius: 5px;
+  background: #f45151;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* end of q2 form styles */
+/*# sourceMappingURL=styles.css.map */

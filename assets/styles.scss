@@ -1,0 +1,330 @@
+/*
+    //
+    // @author: Michal Hromek
+    //
+*/
+
+
+/*
+    //
+    // Q2 FORM STYLES
+    //
+*/
+.o-q2form {
+    display: block;
+    max-width: 100%;
+
+    h2 {
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+    /* 
+        //
+        // FORM ELEMENT
+    */
+    .c-formElement:not(.u-check) {
+        position: relative;
+        display: block;
+        margin: 5px 0;
+        height: 55px;
+
+        /* Label */
+        label {
+            position: absolute;
+
+            top: 25px;
+            left: 5px;
+
+            display: block;
+            font-size: 16px;
+            font-weight: 400;
+            color: #8d8d8d;
+            pointer-events: none;
+
+            transition: 300ms;
+
+            &.required:after {
+                content: "*";
+                padding: 0 1px;
+                color: red;
+            }
+        } /* end of label */
+        
+        /* Hint box */
+        .hintBox {
+            position: absolute;
+            top: 27px;
+            right: 5px;
+
+            font-size: 16px;
+            color: silver;
+            cursor: pointer;
+
+            &:hover {
+                color: #8d8d8d;
+
+                .hintFlash {
+                    display: block;
+                }
+            }
+
+            /* Message box */
+            .hintFlash {
+                position: absolute;
+                bottom: 22px;
+                left: calc(50% - 100px);
+
+                display: none;
+                width: 200px;
+                padding: 5px;
+
+                font-size: 12px;
+                line-height: 1.1;
+                color: #8d8d8d;
+                text-align: center;
+
+                border-radius: 5px;
+                box-shadow: 2px 2px 8px #8d8d8d;
+                background: #fff;
+                z-index: 10;
+
+                @media (max-width: 992px) {
+                    left: auto;
+                    right: -10px;
+                }
+
+                &:before {
+                    position: absolute;
+                    content: "";
+                    bottom: -7px;
+                    left: calc(50% - 7px);
+
+                    border-left: 7px solid transparent;
+                    border-right: 7px solid transparent;
+                    border-top: 7px solid #fff;
+
+                    @media (max-width: 992px) {
+                        left: auto;
+                        right: 10px;
+                    }
+                }
+
+            } /* end of hint flash */
+
+        } /* end of hint box */
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"] {
+            position: relative;
+
+            display: block;
+            width: 100%;
+            padding: 5px 10px;
+            top: 18px;
+
+            font-size: 16px;
+            color: white;
+
+            border: 1px solid #c0c0c0;
+            outline: none;
+            cursor: pointer;
+
+            &::placeholder {
+                color: #fff;
+            }
+
+            &::-moz-placeholder {
+                color: #fff;
+            }
+            
+
+            &:focus {
+                border-bottom: 2px solid #5f5f5f;
+
+                color: #000;
+
+                & + label {
+                    top: 0;
+    
+                    font-size: 13px;
+                    color: #5f5f5f;
+                }
+
+                &::placeholder {
+                    color: #cacaca;
+                }
+    
+                &::-moz-placeholder {
+                    color: #cacaca;
+                }
+
+            } /* end of focus */
+
+            &.filled {
+                color: #000;
+            }
+
+            &.filled + label {
+                top: 0;
+
+                font-size: 13px;
+            }
+
+        } /* end of inputs */
+
+        input[type="date"] {
+            padding: 4px 10px; 
+        }
+
+        /* Error Message */
+        .c-errorMessage {
+
+        }
+
+        /*
+            //
+            // ERROR STATE
+        */
+        &.error {
+            height: 80px;
+
+            input[type="text"],
+            input[type="number"],
+            input[type="email"],
+            input[type="tel"],
+            input[type="date"] {
+                border: 1px solid #f45151;
+            }
+
+            label {
+                color: #f45151;
+            }
+
+        } /* end of error state */
+
+        &.possitive {
+
+            input[type="text"],
+            input[type="number"],
+            input[type="email"],
+            input[type="tel"],
+            input[type="date"] {
+                border: 1px solid #2ca92e;
+            }
+
+            label {
+                color: #2ca92e;
+            }
+
+        } /* end of error state */
+
+    } /* end of form element */
+
+    /* ================================== */
+    
+    /*
+        //
+        // FORM ELEMENT CHECK
+        //
+    */
+    .c-formElement.u-check {
+        position: relative;
+        display: block;
+        margin: 5px 0;
+        height: 30px;
+
+        /* CHECK BOX LABEL */
+        .c-checkBox {
+            position: relative;
+            
+            cursor: pointer;
+
+            input[type="checkbox"] {
+                visibility: hidden;
+                width: 15px;
+                height: 15px;
+                margin-right: 5px;
+
+                & + span {
+                    position: absolute;
+                    left: 0;
+                    top: 5px;
+
+                    display: inline-block;
+                    width: 15px;
+                    height: 15px;
+
+                    border: 1px solid silver;
+                    border-radius: 3px;
+                    pointer-events: none;
+                }
+
+                &:checked + span {
+                    border-color: #2ca92e;
+
+                    &:before {
+                        position: absolute;
+                        left: 1px;
+                        top: -1px;
+                        font-size: 12px;
+                        content: "\f00c ";
+                        font-family: FontAwesome;
+                        color: #2ca92e;
+                    }
+
+                } /* end of checked input */
+
+            } /* end of input */
+
+            label[for] {
+                padding: 0;
+                margin: 0;
+
+                font-size: 16px;
+                font-weight: 400;
+                pointer-events: none;
+
+                &.required:after {
+                    content: "*";
+                    padding: 0 1px;
+                    color: red;
+                }
+            }
+
+
+        } /* end of check box */
+
+        &.error {
+            height: 50px;
+
+            label {
+                color: #f45151;
+            }
+        }
+
+    } /* end of u check form element */
+
+    /* Error Message */
+    .c-errorMessage {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        display: block;
+        padding: 2px 8px;
+        max-width: 100%;
+
+        color: #fff;
+
+        border-radius: 5px;
+        background: #f45151;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+} /* end of q2 form styles */

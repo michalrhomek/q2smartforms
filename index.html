@@ -1,0 +1,148 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <title> Univerzální Q2 formulář</title>
+
+        <link href="assets/styles.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body>
+
+        <div class="container">
+
+            <!-- Q2 UNIVERSAL FORM -->
+             <form class="o-q2form">
+                 <h2> Registrace </h2>
+
+                 <!-- Row -->
+                <div class="row">
+
+                    <!-- 
+                        //
+                        // Form col
+                        // 
+                    -->
+                    <div class="col-xs-12 col-md-6">
+
+                        <!-- Name input -->
+                        <div class="c-formElement" data-hint="Pro bezproblémovou registraci musíme znát Vaše jméno.">
+                            <input type="text" name="name" placeholder="Jan Novák" data-error="Musíte zadat Vaše jméno" required>
+                            <label for="name">Jméno</label>
+                        </div>
+                        <!-- end of name input -->
+
+                    </div> <!-- end of form col -->
+                    <!-- ====================== -->
+
+                    <!-- 
+                        //
+                        // Form col
+                        // 
+                    -->
+                    <div class="col-xs-12 col-md-6">
+
+                        <!-- Email input -->
+                        <div class="c-formElement">
+                            <input type="email" name="email" data-error="Musíte zadat Váš e-mail" data-email="Váš email není ve správném tvaru" required>
+                            <label for="email">E-mail</label>
+                        </div>
+                        <!-- end of email input -->
+    
+                    </div> <!-- end of form col -->
+                    <!-- ====================== -->
+
+                </div> <!-- end of row -->
+
+                <!-- Row -->
+                <div class="row">
+
+                    <!-- 
+                        //
+                        // Form col
+                        // 
+                    -->
+                    <div class="col-xs-12 col-md-6">
+
+                        <!-- Phone input -->
+                        <div class="c-formElement" data-hint="Pro snažší navázání kontaktu potřebujeme znát Vaše telefonní číslo">
+                            <input type="tel" name="phone" data-error="Musíte zadat Vaše telefonní číslo" placeholder="111 222 333" data-format="Špatný formát nebo neúplné číslo" required>
+                            <label for="phone">Telefon</label>
+                        </div>
+                        <!-- end of phone input -->
+
+                    </div> <!-- end of form col -->
+                    <!-- ====================== -->
+
+                    <!-- 
+                        //
+                        // Form col
+                        // 
+                    -->
+                    <div class="col-xs-12 col-md-6">
+
+                        <!-- Date input -->
+                        <div class="c-formElement">
+                            <input type="date" name="date" data-error="Musíte zadat datum Vašeho narození" required>
+                            <label for="date">Datum narození</label>
+                        </div>
+                        <!-- end of date input -->
+    
+                    </div> <!-- end of form col -->
+                    <!-- ====================== -->
+
+                </div> <!-- end of row -->
+
+                <!-- Row -->
+                <div class="row">
+
+                    <!-- 
+                        //
+                        // Form col
+                        // 
+                    -->
+                    <div class="col-xs-12 col-md-6">
+
+                        <!-- Check input -->
+                        <div class="c-formElement u-check">
+
+                            <label class="c-checkBox">
+                                <input type="checkbox" name="check1" data-error="Musíte souhlasit s podmínkami" required><span></span>
+                                <label for="check1">Souhlasím s podmínkami</label>
+                            </label>
+                            
+                        </div>
+                        <!-- end of check input -->
+
+                    </div> <!-- end of form col -->
+                    <!-- ====================== -->
+                
+                </div> <!-- end of row -->
+                       
+
+                <!-- Row -->
+                <div class="row">
+
+                    <!-- 
+                        //
+                        // Form col
+                        // 
+                    -->
+                    <div class="col-xs-12 col-md-6">
+                        <button class="j-submitForm"> Potvrdit </button>
+                    </div> <!-- end of form col -->
+                    <!-- ====================== -->
+
+                </div><!-- end of row -->
+
+            </form>
+            <!-- end of Q2 universal form -->
+
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="assets/script.js"></script>
+    </body>
+</html>
